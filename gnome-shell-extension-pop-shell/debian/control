@@ -1,0 +1,17 @@
+Source: gnome-shell-extension-pop-shell
+Section: gnome
+Priority: optional
+Maintainer: Ward Nakchbandi <hotrod.master@hotmail.com>
+Build-Depends: debhelper-compat (=10), libglib2.0-bin, node-typescript
+Standards-Version: 3.9.8
+Homepage: https://github.com/pop-os/shell
+Vcs-Git: https://github.com/pop-os/shell
+
+Package: gnome-shell-extension-pop-shell
+Architecture: all
+Depends:
+    ${misc:Depends},
+    ${shlibs:Depends},
+    gnome-shell
+Suggests: pop-shell-plugin-system76-power, system76-scheduler
+Description: Pop!_OS Shell

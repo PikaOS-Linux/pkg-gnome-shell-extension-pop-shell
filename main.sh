@@ -1,15 +1,13 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
-mkdir -p ./gnome-shell-extension-pika-darkmode
-cp -rvf ./* ./gnome-shell-extension-pika-darkmode || echo
-cd ./gnome-shell-extension-pika-darkmode
+cd ./gnome-shell-extension-pop-shell
 
 # Get build deps
 apt-get build-dep ./ -y
 
 # Build package
-dpkg-buildpackage
+dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
